@@ -54,8 +54,8 @@ def build(csv_path: str, title: str, out_path: str):
                 f"{v/10000:.1f}万", va="center", ha="left", fontsize=8)
 
     ax.axvline(avg, color="#333333", linestyle="--", linewidth=1)
-    ax.text(avg, len(df) - 0.3, f" 平均 {avg/10000:.1f}万",
-            color="#333333", fontsize=9, ha="left")
+    ax.text(avg, -0.9, f" 平均 {avg/10000:.1f}万",
+            color="#333333", fontsize=9, ha="left", va="top")
 
     ax.set_xlabel("3LDK 平均家賃 (円)")
     ax.set_title(f"{title} 3LDK平均家賃ヒートマップ（推計値）", fontsize=14, pad=12)
